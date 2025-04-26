@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.dropdown{
+    margin-right: 0px;
+    margin-left: 500px;
+}
+.search{
+    /* margin-right: 300px; */
+    border: 1px solid #9E8049;
+}
+.image{
+    width: 28px;
+    height: 28px;
+}
+.text{
+    font-size: 25px;
+    color: #000000;
+    font-weight: 1000;
+    font-family: 'Courier New', Courier, monospace;
+}
+.mini-text{
+    margin-left: 0px;
+    /* margin-top: 50px; */
+    font-size: 25px;
+    color: #000000;
+    font-weight: 1000;
+    font-family: 'Courier New', Courier, monospace;
+}
