@@ -79,3 +79,22 @@ li.nav-item.dropdown{
 .icon-text{
     font-weight: 600 ;
 }
+.nav-link i{
+    margin-right: 8px;
+}
+.main{
+    display: flex;
+}
+h2{
+    font-size: 2rem;
+    font-weight: bold;  
+    margin-left: 20px;
+    margin-top: 20px;
+}
+h3{
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin-left: 20px;
+    margin-top: 0px;
+    color: rgb(175, 163, 163);
+}
