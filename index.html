@@ -6,6 +6,7 @@
     <title>Bootstrap demo</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <link href="/src/styles.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
   </head>
   <body>
@@ -101,11 +102,152 @@
         </div>
       </div>
          <!-- Hero Section -->
-        <div>
-          <h2>Hello Hasnain</h2>
+        <div  style="display: block; height: 50px;">
+          <h2>Hello Hasnain</h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK1ZcLZltbzj5FbS0cfRS2l50Y-7j-0Smlyw&s" alt="">
           <h3>Let's learn something new today </h3>
-        </div>  
+        </div>
+        <div class="container mt-4">
+          <div class="row g-4">
+            <!-- Card 1: Recent Enrolled Course -->
+            <div class="col-md-4">
+              <div class="card p-3 shadow-sm bg-white">
+                <h5>Recent Enrolled Course</h5>
+                <div style="border: 2px solid #00c8c8; border-radius: 5%; padding: 15px;">
+                  <i class="fa-solid fa-paintbrush" style=" padding: 8px; border-radius: 5%;"></i>
+                <p style="font-weight: 600;">Product Design Course</p>
+                <div class="progress" >
+                  <div class="progress-bar" style="width: 50%"></div>
+                </div>
+                <small><span style="color: orange;"">14/30</span> Classes Completed</small>
+              </div>
+              </div>
+            </div>
+            <!-- Card 2: Your Resources -->
+            <div class="col-md-6">
+              <div class="card p-3 shadow-sm bg-white">
+                <h5>Your Resources</h5>
+                <ul class="list-unstyled" style="font-size: 10px;">
+                  <li>📄 Auto-layout.pdf (8.5MB)</li>
+                  <div class="progress" style="height: 4px; margin: 5px 0; width: 100%;">
+                    <div class="progress-bar" style="width: 85%"></div>
+                  </div>
+                  <li>📄 Design_Tips.png (5.1MB)</li>
+                  <div style="margin: 5px 0; font-size: 8px; color: #05baba;">
+                    <span>Let's qucikly create some reaistic and shiny metal Figma</span>
+                  </div>
+                  <li>📄 Books_of_UI.pdf (2.5MB)</li>
+                  <div style="margin: 5px 0; font-size: 8px; color: #05baba;">
+                    <span>An introductory guide to the fundamental principle and practices of User experiance (UX) design</span>
+                  </div>
+                </ul>
+                <button class="btn-grad">See more</button> 
+              </div>
+            </div>
+            <!-- Calendar Card -->
+           <div class="col-md-4">
+  <div class="card p-3 shadow-sm bg-white">
+    <h5>June 2024</h5>
+    <div class="calendar">
+      <table class="table table-borderless text-center">
+        <thead>
+          <tr>
+            <th>Sun</th>
+            <th>Mon</th>
+            <th>Tue</th>
+            <th>Wed</th>
+            <th>Thu</th>
+            <th>Fri</th>
+            <th>Sat</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td></td><td></td><td></td><td></td><td></td><td>1</td><td>2</td>
+          </tr>
+          <tr>
+            <td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
+          </tr>
+          <tr>
+            <td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td>
+          </tr>
+          <tr>
+            <td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
+          </tr>
+          <tr>
+            <td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+           </div>
+           <!-- Hours Spent Card -->
+           <div class="col-md-4">
+  <div class="card p-3 shadow-sm bg-white">
+    <h5>Hours Spent</h5>
+    <canvas id="hoursChart" height="200"></canvas>
+  </div>
+           </div>
+            <!-- Card 5: Performance -->
+            <div class="col-md-4">
+              <div class="card p-3 shadow-sm bg-white text-center">
+                <h5>Performance</h5>
+                <h1 style="color: #00c8c8;">8.966</h1>
+                <small>Monthly Assignment Grade</small>
+              </div>
+            </div>
+            <!-- Card 6: To Do List -->
+            <div class="col-md-4">
+              <div class="card p-3 shadow-sm bg-white">
+                <h5>To Do List</h5>
+                <div class="todo-item">
+                  <i class="bi bi-check-square-fill"></i> Human Interaction Designs (30 June)
+                </div>
+                <div class="todo-item">
+                  <i class="bi bi-check-square-fill"></i> Design System Basics (24 June)
+                </div>
+                <div class="todo-item">
+                  <i class="bi bi-check-square-fill"></i> Introduction to UI (10 June)
+                </div>
+                <div class="todo-item">
+                  <i class="bi bi-check-square-fill"></i> Basics of Figma (5 June)
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
      </div>
+     
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
   </body>
+ <script>
+const ctx = document.getElementById('hoursChart').getContext('2d');
+new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+    datasets: [
+      {
+        label: 'Study',
+        data: [20, 30, 50, 70, 40],
+        backgroundColor: '#00c8c8',
+      },
+      {
+        label: 'Online Test',
+        data: [10, 20, 30, 20, 10],
+        backgroundColor: '#ffc107',
+      }
+    ]
+  },
+  options: {
+    responsive: true,
+    scales: {
+      y: {
+        beginAtZero: true
+      }
+    }
+  }
+});
+ </script>
 </html>

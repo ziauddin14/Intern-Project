@@ -84,12 +84,14 @@ li.nav-item.dropdown{
 }
 .main{
     display: flex;
+    
 }
 h2{
     font-size: 2rem;
     font-weight: bold;  
     margin-left: 20px;
-    margin-top: 20px;
+    margin-top: 50px !important;
+    display: inline;
 }
 h3{
     font-size: 1.5rem;
@@ -97,4 +99,55 @@ h3{
     margin-left: 20px;
     margin-top: 0px;
     color: rgb(175, 163, 163);
+    display: block
 }
+img{
+    height:40px;
+    width: 40px;
+}
+.card {
+    border: none;
+    border-radius: 15px;
+  }
+  .card h5 {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .progress {
+    height: 10px;
+    width: 150px;
+    border-radius: 5px;
+ }
+  .progress-bar {
+    background-color: orange;
+  }
+  .calendar {
+    text-align: center;
+  }
+  .todo-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  .todo-item i {
+    color: #00c8c8;
+    margin-right: 8px;
+  }
+  .btn-grad {
+    background-color: rgb(165, 255, 225);
+     text-align: center;
+     transition: 0.5s;
+     background-size: 200% auto;
+     color: rgb(47, 175, 47);            
+     box-shadow: 0 0 20px #eee;
+     border-radius: 5px;
+     display: block;
+     border: 2px solid #eee;
+   }
+
+   .btn-grad:hover {
+     background-position: right center; /* change the direction of the change here */
+     color: #fff;
+     text-decoration: none;
+   }
+  
