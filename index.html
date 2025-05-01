@@ -3,314 +3,586 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link href="/src/styles.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <title>Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   </head>
-  <body>
+  <body class="bg-gray-50">
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-light">
-      <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="#">
-          <img class="image" src="https://media.licdn.com/dms/image/v2/D560BAQFMO_FydaEpBA/company-logo_200_200/company-logo_200_200/0/1726658673264/aaghaaz_tech_logo?e=1751500800&v=beta&t=5JCdqtvGFKyVscr231sWO1_6im-W74Ak7rXFTwYcd8I" alt="" style="height: 40px; width: 40px;">
-          <div class="d-flex flex-column ms-2 p-0 m-0" style="line-height: 1;">
-            <span class="text fw-bold p-0 my-0 mx-2" style="font-size: 22px;">aaghaaz</span>
-            <span class="mini-text p-0 my-0 mx-5" style="font-size: 22px; font-weight: 700;"><i>Tech</i></span>
+    <nav class="bg-white border-b">
+      <div class="px-6 py-3 flex items-center">
+        <!-- Logo -->
+        <a class="flex items-center">
+          <img src="https://media.licdn.com/dms/image/v2/D560BAQFMO_FydaEpBA/company-logo_200_200/company-logo_200_200/0/1726658673264/aaghaaz_tech_logo?e=1751500800&v=beta&t=5JCdqtvGFKyVscr231sWO1_6im-W74Ak7rXFTwYcd8I" 
+               alt="Logo" 
+               class="h-10 w-10">
+          <div class="flex flex-col ml-2">
+            <span class="text-xl font-bold">aaghaaz</span>
+            <span class="text-xl font-bold italic -mt-1">Tech</span>
           </div>
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
-          <div class="nav-serch d-flex align-items-center">
-            <div class="search-icon">
-              <i class="fa-solid fa-magnifying-glass"></i>
+
+        <!-- Search Section with increased gap -->
+        <div class="flex items-center ml-[60px] relative">
+          <div class="flex items-center w-[400px] bg-gray-50 rounded-[10%] border border-gradient relative">
+            <i class="fa-solid fa-magnifying-glass text-gray-400 absolute left-3"></i>
+            <input type="text" 
+                   placeholder="Search" 
+                   class="bg-transparent w-full pl-10 pr-2 py-2 text-sm placeholder-gray-400 outline-none rounded-[10%]">
+            <div class="flex items-center gap-1.5 border-l border-gray-200 pl-2 pr-1 py-1.5">
+              <span class="text-sm text-gray-600">F</span>
+              <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
             </div>
-            <input type="text" placeholder="Search" class="search-input form-control mx-2">
-            <select class="search-select form-select">
-              <option value="">F</option>
-            </select>
           </div>
-           <div class="icons">
-            <div class="nav-icon d-flex align-items-center gap-3">
-              <i class="fa-regular fa-bell"></i>
+        </div>
+
+        <!-- User Section -->
+        <div class="flex items-center gap-6 ml-auto">
+          <div class="w-10 h-10 rounded-full bg-gray-50 flex items-center justify-center">
+            <i class="fa-regular fa-bell text-gray-600"></i>
+          </div>
+          <div class="flex items-center gap-3">
+            <span class="text-gray-700">Hasnain</span>
+            <div class="relative group">
+              <button class="flex items-center gap-2">
+                <img src="avatar.jpg" alt="User" class="w-8 h-8 rounded-full">
+                <i class="fa-solid fa-chevron-down text-xs text-gray-400"></i>
+              </button>
+              <!-- Dropdown menu can be added here -->
             </div>
-            <span class="icon-text">Husnain</span>
-            <li class="nav-item dropdown">
-              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"></a>
-              <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Action</a></li>
-                <li><a class="dropdown-item" href="#">Another action</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="#">Something else here</a></li>
-              </ul>
-            </li>
-         </div>
+          </div>
+        </div>
       </div>
     </nav>
-    <!-- Body -->
-     <div class="main">
-      <div class="sidebar d-flex flex-column justify-content-between" style="height: 715px; width: 280px; background-color: #f8f9fa;">
-        <div class="sidebar-content">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link " aria-current="page" href="#" style="text-decoration: none;  font-weight: 600; margin-left: 8px; color: #ffffff; background: linear-gradient(90deg, rgba(0, 0, 0, 1) 0%, rgba(158, 128, 73, 1) 0%, rgba(237, 221, 83, 1) 100%);;">
-                <i class="fa-solid fa-house"></i>
-                Dashboard
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="text-decoration: none; font-weight: 600; margin-left: 8px; color: #542828;">
-                <i class="fa-solid fa-clipboard-list"></i>
-                Assignments
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="text-decoration: none;  font-weight: 600; margin-left: 8px; color: #542828;">
-                <i class="fa-regular fa-calendar-days"></i>
-                Schedule
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="text-decoration: none;  font-weight: 600; margin-left: 8px; color: #542828;">
-                <i class="fa-solid fa-message"></i>
-                Recordings
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="text-decoration: none;  font-weight: 600; margin-left: 8px; color: #542828;">
-                <i class="fa-solid fa-folder-closed"></i>
-                Resources
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="text-decoration: none;  font-weight: 600; margin-left: 8px; color: #542828;">
-                <i class="fa-solid fa-note-sticky"></i>
-                Notes
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#" style="text-decoration: none;  font-weight: 600; margin-left: 8px; color: #542828;">
-                <i class="fa-solid fa-graduation-cap"></i>
-                Courses
-              </a>
-            </li>
-          </ul>
+
+    <div class="flex">
+      <!-- Sidebar -->
+     <!-- Sidebar -->
+<div class="w-64 min-h-screen bg-white">
+  <div class="p-4 space-y-1">
+      <!-- Dashboard -->
+      <a href="#" class="flex items-center px-4 py-3 rounded-lg bg-gradient-to-r from-yellow-400 to-teal-400 text-white">
+          <i class="fa-solid fa-house mr-3"></i>
+          <span class="font-medium">Dashboard</span>
+      </a>
+
+      <!-- Assignments -->
+      <a href="#" class="flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50">
+          <i class="fa-solid fa-clipboard-list mr-3"></i>
+          <span class="font-medium">Assignments</span>
+      </a>
+
+      <!-- Schedule -->
+      <a href="#" class="flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50">
+          <i class="fa-regular fa-calendar-days mr-3"></i>
+          <span class="font-medium">Schedule</span>
+      </a>
+
+      <!-- Recordings -->
+      <a href="#" class="flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50">
+          <i class="fa-solid fa-message mr-3"></i>
+          <span class="font-medium">Recordings</span>
+      </a>
+
+      <!-- Resources -->
+      <a href="#" class="flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50">
+          <i class="fa-solid fa-folder-closed mr-3"></i>
+          <span class="font-medium">Resources</span>
+      </a>
+
+      <!-- Notes -->
+      <a href="#" class="flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50">
+          <i class="fa-solid fa-note-sticky mr-3"></i>
+          <span class="font-medium">Notes</span>
+      </a>
+
+      <!-- Courses -->
+      <a href="#" class="flex items-center px-4 py-3 rounded-lg text-gray-700 hover:bg-gray-50">
+          <i class="fa-solid fa-graduation-cap mr-3"></i>
+          <span class="font-medium">Courses</span>
+      </a>
+  </div>
+</div>
+      <!-- Main Content -->
+      <div class="flex-1 p-8">
+        <!-- Header -->
+        <div class="mb-8">
+          <h1 class="text-2xl font-semibold flex items-center gap-2">
+            Hello Hasnain
+            <span class="text-2xl">👋</span>
+          </h1>
+          <p class="text-gray-500 mt-1">Let's learn something new today!</p>
+        </div>
+
+        <!-- Top Row -->
+        <div class="grid grid-cols-12 gap-6">
+          <!-- Recent enrolled course -->
+          <div class="col-span-4">
+            <div class="bg-white rounded-xl p-5 shadow-sm">
+              <h3 class="font-medium mb-4">Recent enrolled course</h3>
+              <div class="border-2 border-teal-400 rounded-lg p-4">
+                <div class="flex items-center gap-3 mb-3">
+                  <i class="fa-solid fa-paintbrush p-2 bg-gray-50 rounded-lg"></i>
+                  <span class="font-medium">Product Design Course</span>
+                </div>
+                <div class="w-full bg-gray-100 rounded-full h-2">
+                  <div class="bg-gradient-to-r from-teal-400 to-yellow-400 h-2 rounded-full w-1/2"></div>
+                </div>
+                <p class="text-sm mt-2">
+                  <span class="text-orange-400">14/30</span> classes
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Your Resources -->
+          <div class="col-span-5">
+            <div class="bg-white rounded-xl p-5 shadow-sm">
+              <h3 class="font-medium mb-4">Your Resources</h3>
+              <div class="space-y-4">
+                <!-- Auto-layout PDF -->
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>📄 Auto-layout.pdf</span>
+                    <span class="text-gray-500">8.5MB</span>
+                  </div>
+                  <div class="w-full bg-gray-100 rounded-full h-1">
+                    <div class="bg-gradient-to-r from-teal-400 to-yellow-400 h-1 rounded-full w-4/5"></div>
+                  </div>
+                </div>
+
+                <!-- Design Tips PDF -->
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>📄 Design_Tips.png</span>
+                    <span class="text-gray-500">5.1MB</span>
+                  </div>
+                  <p class="text-xs text-teal-400 ml-1">
+                    Let's quickly create some realistic and shiny metal Figma
+                  </p>
+                </div>
+
+                <!-- Books of UI PDF -->
+                <div>
+                  <div class="flex justify-between text-sm mb-1">
+                    <span>📄 Books_of_UI.pdf</span>
+                    <span class="text-gray-500">2.5MB</span>
+                  </div>
+                  <p class="text-xs text-teal-400 ml-1">
+                    An introductory guide to the fundamental principle and practices of User Exper (UX) design
+                  </p>
+                </div>
+              </div>
+
+              <!-- Updated See More Button -->
+              <button class="mt-4 px-4 py-1 text-xs rounded-full bg-gradient-to-r from-[#9e8049] to-[#eddd53] text-white w-[100%]">
+                see more
+              </button>
+            </div>
+          </div>
+
+          <!-- Calendar -->
+          <div class="col-span-3">
+            <div class="bg-white rounded-xl p-5 shadow-sm">
+                <!-- Calendar Header -->
+                <h3 class="text-center text-green-500 font-medium text-base mb-4">June 2024</h3>
+
+                <!-- Calendar Table -->
+                <table class="w-full text-sm">
+                    <!-- Days Header -->
+                    <thead>
+                        <tr>
+                            <th class="text-teal-400 font-normal text-xs pb-2">Sun</th>
+                            <th class="text-teal-400 font-normal text-xs pb-2">Mon</th>
+                            <th class="text-teal-400 font-normal text-xs pb-2">Tue</th>
+                            <th class="text-teal-400 font-normal text-xs pb-2">Wed</th>
+                            <th class="text-teal-400 font-normal text-xs pb-2">Thu</th>
+                            <th class="text-teal-400 font-normal text-xs pb-2">Fri</th>
+                            <th class="text-teal-400 font-normal text-xs pb-2">Sat</th>
+                        </tr>
+                    </thead>
+                    <!-- Calendar Body -->
+                    <tbody class="text-xs">
+                        <!-- Week 1 -->
+                        <tr class="text-center">
+                            <td class="p-1"></td>
+                            <td class="p-1"></td>
+                            <td class="p-1"></td>
+                            <td class="p-1"></td>
+                            <td class="p-1"></td>
+                            <td class="p-1">1</td>
+                            <td class="p-1">2</td>
+                        </tr>
+                        <!-- Week 2 -->
+                        <tr class="text-center">
+                            <td class="p-1 text-teal-400">3</td>
+                            <td class="p-1">4</td>
+                            <td class="p-1">5</td>
+                            <td class="p-1">6</td>
+                            <td class="p-1">7</td>
+                            <td class="p-1">8</td>
+                            <td class="p-1">9</td>
+                        </tr>
+                        <!-- Week 3 -->
+                        <tr class="text-center">
+                            <td class="p-1 text-teal-400">10</td>
+                            <td class="p-1">11</td>
+                            <td class="p-1">12</td>
+                            <td class="p-1">13</td>
+                            <td class="p-1">14</td>
+                            <td class="p-1">
+                                <span class="inline-flex items-center justify-center h-6 w-6 rounded-full bg-green-500 text-white">15</span>
+                            </td>
+                            <td class="p-1">16</td>
+                        </tr>
+                        <!-- Week 4 -->
+                        <tr class="text-center">
+                            <td class="p-1 text-teal-400">17</td>
+                            <td class="p-1">18</td>
+                            <td class="p-1">19</td>
+                            <td class="p-1">20</td>
+                            <td class="p-1">21</td>
+                            <td class="p-1">22</td>
+                            <td class="p-1">23</td>
+                        </tr>
+                        <!-- Week 5 -->
+                        <tr class="text-center">
+                            <td class="p-1 text-teal-400">24</td>
+                            <td class="p-1">25</td>
+                            <td class="p-1">26</td>
+                            <td class="p-1">27</td>
+                            <td class="p-1">28</td>
+                            <td class="p-1">29</td>
+                            <td class="p-1">30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+          </div>
+        </div>
+
+        <!-- Middle Row with Equal Heights -->
+        <div class="grid grid-cols-12 gap-6 mt-6">
+            <!-- Hours Spent -->
+            <div class="col-span-4">
+                <div class="bg-white rounded-xl p-5 shadow-sm h-[280px]">
+                    <div class="flex items-center justify-between mb-4">
+                        <h3 class="font-medium">Hours Spent</h3>
+                        
+                        <!-- Legend -->
+                        <div class="flex items-center gap-4 text-sm">
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-sm bg-teal-400"></div>
+                                <span class="text-gray-600">Study</span>
+                            </div>
+                            <div class="flex items-center gap-2">
+                                <div class="w-3 h-3 rounded-sm bg-yellow-400"></div>
+                                <span class="text-gray-600">Online Test</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Chart Container -->
+                    <div class="h-[200px]">
+                        <canvas id="hoursChart"></canvas>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance -->
+            <div class="col-span-4">
+                <div class="bg-white rounded-xl p-5 shadow-sm h-[280px]">
+                    <h3 class="font-medium mb-4">Performance</h3>
+                    
+                    <!-- Grade Display -->
+                    <div class="text-center mt-4">
+                        <div class="relative w-28 h-28 mx-auto mb-3">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <circle 
+                                    cx="50" 
+                                    cy="50" 
+                                    r="45" 
+                                    fill="none" 
+                                    stroke="#f0f0f0" 
+                                    stroke-width="8"
+                                />
+                                <circle 
+                                    cx="50" 
+                                    cy="50" 
+                                    r="45" 
+                                    fill="none" 
+                                    stroke="#00c8c8" 
+                                    stroke-width="8" 
+                                    stroke-dasharray="283" 
+                                    stroke-dashoffset="70" 
+                                    transform="rotate(-90 50 50)"
+                                />
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center">
+                                <span class="text-4xl font-bold text-teal-400">8.966</span>
+                            </div>
+                        </div>
+                        <p class="text-sm text-gray-500">Monthly Assignment Grade</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Todo List -->
+            <div class="col-span-4">
+                <div class="bg-white rounded-xl p-5 shadow-sm h-[280px] overflow-auto">
+                    <h3 class="font-medium mb-4">To Do List</h3>
+                    
+                    <!-- Todo Items -->
+                    <div class="space-y-3">
+                        <!-- Human Interaction Design -->
+                        <div class="border-b border-gray-100 pb-2">
+                            <div class="flex items-center gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-gray-50 flex items-center justify-center">
+                                    <i class="fa-solid fa-box-archive text-gray-600 text-sm"></i>
+                                </div>
+                                <span class="text-sm font-medium">Human Interaction Designs</span>
+                            </div>
+                            <div class="ml-10 mt-1">
+                                <span class="text-xs text-teal-400">Tuesday, 30 June 2024</span>
+                            </div>
+                        </div>
+
+                        <!-- Design System Basics -->
+                        <div class="border-b border-gray-100 pb-2">
+                            <div class="flex items-center gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-gray-50 flex items-center justify-center">
+                                    <i class="fa-solid fa-box-archive text-gray-600 text-sm"></i>
+                                </div>
+                                <span class="text-sm font-medium">Design System Basics</span>
+                            </div>
+                            <div class="ml-10 mt-1">
+                                <span class="text-xs text-teal-400">Tuesday, 30 June 2024</span>
+                            </div>
+                        </div>
+
+                        <!-- Introduction to UI (Completed) -->
+                        <div class="border-b border-gray-100 pb-2">
+                            <div class="flex items-center gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-green-500 flex items-center justify-center">
+                                    <i class="fa-solid fa-check text-white text-sm"></i>
+                                </div>
+                                <span class="text-sm font-medium text-gray-400">Introduction to UI</span>
+                            </div>
+                            <div class="ml-10 mt-1">
+                                <span class="text-xs text-teal-400">Tuesday, 30 June 2024</span>
+                            </div>
+                        </div>
+
+                        <!-- Basics of Figma (Completed) -->
+                        <div class="border-b border-gray-100 pb-2">
+                            <div class="flex items-center gap-3">
+                                <div class="w-7 h-7 rounded-lg bg-green-500 flex items-center justify-center">
+                                    <i class="fa-solid fa-check text-white text-sm"></i>
+                                </div>
+                                <span class="text-sm font-medium text-gray-400">Basics of Figma</span>
+                            </div>
+                            <div class="ml-10 mt-1">
+                                <span class="text-xs text-teal-400">Tuesday, 30 June 2024</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bottom Row with Equal Heights -->
+        <div class="grid grid-cols-12 gap-6 mt-6">
+            <!-- Recent Enrolled Classes -->
+            <div class="col-span-7">
+                <div class="bg-white rounded-xl p-5 shadow-sm h-[320px]">
+                    <!-- Header -->
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="font-medium">Recent enrolled classes</h3>
+                        <div class="flex items-center gap-4">
+                            <span class="text-sm text-gray-600">All</span>
+                            <i class="fa-solid fa-magnifying-glass text-gray-600"></i>
+                        </div>
+                    </div>
+
+                    <!-- Classes List -->
+                    <div class="space-y-4">
+                        <!-- UX Design Class -->
+                        <div class="p-4 rounded-lg bg-gradient-to-r from-yellow-50 to-teal-50 border-l-4 border-teal-400">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fa-brands fa-figma text-lg text-gray-700"></i>
+                                <span class="font-medium text-green-600">User Experience (UX) Design</span>
+                            </div>
+                            <div class="ml-9">
+                                <div class="flex items-center gap-5 text-sm text-gray-500">
+                                    <span>🕒 5:30hrs</span>
+                                    <span><i class="fa-regular fa-note-sticky mr-1"></i> 05 Lessons</span>
+                                    <span><i class="fa-regular fa-circle-check mr-1"></i> Assignments</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Visual Design Class -->
+                        <div class="p-4 rounded-lg hover:bg-gradient-to-r hover:from-yellow-50 hover:to-teal-50 hover:border-l-4 hover:border-teal-400 transition-all duration-300">
+                            <div class="flex items-center gap-3 mb-2">
+                                <i class="fa-solid fa-palette text-lg text-gray-700"></i>
+                                <span class="font-medium text-gray-700">Visual Design and Branding</span>
+                            </div>
+                            <div class="ml-9">
+                                <div class="flex items-center gap-5 text-sm text-gray-500">
+                                    <span>🕒 4:00hrs</span>
+                                    <span><i class="fa-regular fa-note-sticky mr-1"></i> 03 Lessons</span>
+                                    <span><i class="fa-regular fa-circle-check mr-1"></i> Assignments</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Upcoming Lesson -->
+            <div class="col-span-5">
+                <div class="bg-white rounded-xl p-5 shadow-sm h-[320px]">
+                    <h3 class="font-medium mb-6">Upcoming Lesson</h3>
+                    
+                    <!-- Lessons List -->
+                    <div class="space-y-6">
+                        <!-- UX Design Fundamentals -->
+                        <div class="border-b border-gray-100 pb-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-gray-50 flex items-center justify-center">
+                                        <i class="fa-solid fa-graduation-cap text-gray-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-medium">UX Design Fundamentals</h4>
+                                        <p class="text-xs text-teal-400 mt-1">5:30pm</p>
+                                    </div>
+                                </div>
+                                <button class="px-6 py-1.5 rounded-full bg-gradient-to-r from-yellow-400 to-teal-400 text-white text-xs font-medium">
+                                    Join
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Interaction Design -->
+                        <div class="border-b border-gray-100 pb-6">
+                            <div class="flex items-center justify-between">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-8 h-8 rounded-lg bg-gray-50 flex items-center justify-center">
+                                        <i class="fa-solid fa-circle-check text-gray-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="text-sm font-medium">Interaction Design</h4>
+                                        <p class="text-xs text-teal-400 mt-1">9:00pm</p>
+                                    </div>
+                                </div>
+                                <button class="px-6 py-1.5 rounded-full border border-gray-200 text-gray-400 text-xs font-medium">
+                                    Join
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
       </div>
-         <!-- Hero Section -->
-        <div class=""  style="display: block; height: 50px;">
-          <h2>Hello Hasnain</h2><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTK1ZcLZltbzj5FbS0cfRS2l50Y-7j-0Smlyw&s" alt="">
-          <h3>Let's learn something new today </h3>
-        </div>
-        <div class="container-fluid mt-5 ms-0">
-          <div class="row g-4" >
-            <!-- Card 1: Recent Enrolled Course -->
-            <div class="col-md-4">  
-              <div class="card p-3 shadow-sm bg-white">
-                <h5>Recent Enrolled Course</h5>
-                <div style="border: 2px solid #00c8c8; border-radius: 5%; padding: 15px;">
-                  <i class="fa-solid fa-paintbrush" style=" padding: 8px; border-radius: 5%;"></i>
-                <p style="font-weight: 600;">Product Design Course</p>
-                <div class="progress" >
-                  <div class="progress-bar" style="width: 50%"></div>
-                </div>
-                <small><span style="color: orange;"">14/30</span> Classes Completed</small>
-              </div>
-              </div>
-            </div>
-            <!-- Card 2: Your Resources -->
-            <div class="col-md-6">
-              <div class="card p-3 shadow-sm bg-white">
-                <h5>Your Resources</h5>
-                <ul class="list-unstyled" style="font-size: 10px;">
-                  <li>📄 Auto-layout.pdf <span style="margin-left: 200px;">(8.5MB)</span></li>
-                  <div class="progress" style="height: 4px; margin: 5px 0; width: 80%;">
-                    <div class="progress-bar" style="width: 85%"></div>
-                  </div>
-                  <li>📄 Design_Tips.png <span style="margin-left: 200px;">(5.1MB)</span></li>
-                  <div style="margin: 5px 0; font-size: 8px; color: #05baba;">
-                    <span>Let's qucikly create some reaistic and shiny metal Figma</span>
-                  </div>
-                  <li>📄 Books_of_UI.pdf <span style="margin-left: 200px;">(2.5MB)</span></li>
-                  <div style="margin: 5px 0; font-size: 8px; color: #05baba;">
-                    <span>An introductory guide to the fundamental principle and practices of User experiance (UX) design</span>
-                  </div>
-                </ul>
-                <button class="btn-grad">see more</button> 
-              </div>
-            </div>
-            <!-- Calendar Card -->
-           <div class="col-md-4">
-  <div class="card p-3 shadow-sm bg-white">
-    <h5 style="text-align: center; color: rgb(47, 175, 47); font-size: 1rem;  font-weight: 600;">June 2024</h5>
-    <div class="calendar">
-      <table class="table table-borderless text-center">
-        <thead>
-          <tr>
-            <th style="color: #05baba; font-weight: 400; font-size: 0.8rem;">Sun</th>
-            <th style="color: #05baba; font-weight: 400; font-size: 0.8rem;">Mon</th>
-            <th style="color: #05baba; font-weight: 400; font-size: 0.8rem;">Tue</th>
-            <th style="color: #05baba; font-weight: 400; font-size: 0.8rem;">Wed</th>
-            <th style="color: #05baba; font-weight: 400; font-size: 0.8rem;">Thu</th>
-            <th style="color: #05baba; font-weight: 400; font-size: 0.8rem;">Fri</th>
-            <th style="color: #05baba; font-weight: 400; font-size: 0.8rem;">Sat</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td></td><td></td><td></td><td></td><td></td><td>1</td><td>2</td>
-          </tr>
-          <tr>
-            <td style="color: #05baba;"">3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td>
-          </tr>
-          <tr>
-            <td style="color: #05baba;"">10</td><td>11</td><td>12</td><td>13</td><td>14</td><td style="background-color: rgb(47, 175, 47); border-radius: 50%; color: aliceblue;">15</td><td>16</td>
-          </tr>
-          <tr>
-            <td style="color: #05baba;"">17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td><td>23</td>
-          </tr>
-          <tr>
-            <td style="color: #05baba;"">24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td><td>30</td>
-          </tr>
-        </tbody>
-      </table>
     </div>
-  </div>
-           </div>
-           <!-- Hours Spent Card -->
-           <div class="col-md-4">
-  <div class="card p-3 shadow-sm bg-white">
-    <h5>Hours Spent</h5>
-    <canvas id="hoursChart" height="200"></canvas>
-  </div>
-           </div>
-            <!-- Card 5: Performance -->
-            <div class="col-md-4">
-              <div class="card p-3 shadow-sm bg-white text-center">
-                <h5>Performance</h5>
-                <h1 style="color: #00c8c8;">8.966</h1>
-                <small>Monthly Assignment Grade</small>
-              </div>
-            </div>
-            <!-- Card 6: To Do List -->
-            <div class="col-md-4">
-              <div class="card p-3 shadow-sm bg-white">
-                <h5>To Do List</h5>
-                <div class="todo-item">
-                  <i class="fa-solid fa-box-archive"></i>Human Interaction Designs
-                </div>
-                <div style="margin: 3px 25px; font-size: 14px; color: #05baba;"><span>Tuesday, 30 June 2024</span></div><hr>
-                <div class="todo-item">
-                   <i class="fa-solid fa-box-archive"></i>Design System Basics
-                </div>
-                <div style="margin: 3px 25px; font-size: 14px; color: #05baba;"><span>Tuesday, 30 June 2024</span></div><hr>
-                <div class="todo-item">
-                  <i class="fa-solid fa-check" style="background-color: yellowgreen; color: whitesmoke;"></i>Introduction to UI 
-                </div>
-                <div style="margin: 3px 25px; font-size: 14px; color: #05baba;"><span>Tuesday, 30 June 2024</span></div><hr>
-                <div class="todo-item">
-                  <i class="fa-solid fa-check" style="background-color: yellowgreen; color: whitesmoke;"></i>Basics of Figma 
-                </div>
-                <div style="margin: 3px 25px; font-size: 14px; color: #05baba;"><span>Tuesday, 30 June 2024</span></div><hr>
-            </div>
-          </div>
-        </div>
 
-        <div class="dashboard-container">
-          <!-- Recent Enrolled Classes -->
-          <div class="card recent-classes" style="height: 320px; padding-top: 0px;">
-            <h2 style="margin-left: 5px; font-weight: 500;">Recent enrolled classes <span style="margin-left: 70px; font-weight: 500;">All</span><i class="fa-solid fa-magnifying-glass" style="margin-left: 15px;"></i></h2>
-            
-        
-            <div class="class-item active">
-              <div class="title"> 
-                <i class="fa-brands fa-figma" style="font-size: 16px; "></i>
-                <span class="icon" style="color: yellowgreen; margin-left: 8px;"> User Experience (UX) Design</span>
-              </div>
-              <div class="details" style="margin-left: 18px;">
-                <span>🕒 5:30hrs</span>
-                <span><i class="fa-regular fa-note-sticky" style="margin-left: 18px;"></i> 05 Lessons</span>
-                <span><i class="fa-regular fa-circle-check" style="margin-left: 18px;"></i> Assignments</span>
-              </div>
-            </div>
-        
-            <div class="class-item">
-              <div class="title">
-                <i class="fa-solid fa-palette" style="font-size: 16px; "></i>
-                <span class="icon" style=" margin-left: 8px;">Visual Design and Branding</span> 
-              </div>
-              <div class="details" style="margin-left: 18px;"">
-                <span>🕒 4:00hrs</span>
-                <span><i class="fa-regular fa-note-sticky" style="margin-left: 18px;"></i> 03 Lessons</span>
-                <span><i class="fa-regular fa-circle-check" style="margin-left: 18px;"></i>  Assignments</span>
-              </div>
-            </div>
-          </div>
-        
-          <!-- Upcoming Lessons -->
-          <div class="card upcoming-lessons" style="height: 320px; padding-top: 0px;" ">
-            <h2>Upcoming Lesson</h2>
-            <div class="lesson-item" style="margin-top: 0px; padding-top: 5px; height: 100px;">
-              <div class="lesson-info">
-                <div class="lesson-title">
-                  <i class="fa-solid fa-graduation-cap"></i>
-                  <span class="icon" style=" margin-left: 8px;">UX Design Fundamentals</span>
-                </div>
-                <button class="btn-grad">Join</button>
-              </div>
-              <div class="lesson-time">5:30pm</div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Your chart initialization script -->
+    <script>
+    const ctx = document.getElementById('hoursChart').getContext('2d');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+            datasets: [
+                {
+                    label: 'Study',
+                    data: [20, 30, 50, 70, 40],
+                    backgroundColor: '#00c8c8', // teal color
+                    borderRadius: 4,
+                    barPercentage: 0.6,
+                    categoryPercentage: 0.7
+                },
+                {
+                    label: 'Online Test',
+                    data: [10, 20, 30, 20, 10],
+                    backgroundColor: '#eddd53', // yellow color
+                    borderRadius: 4,
+                    barPercentage: 0.6,
+                    categoryPercentage: 0.7
+                }
+            ]
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+                legend: {
+                    display: false // Hide default legend as we have custom one
+                }
+            },
+            scales: {
+                x: {
+                    grid: {
+                        display: false
+                    },
+                    ticks: {
+                        font: {
+                            size: 12
+                        },
+                        color: '#666'
+                    }
+                },
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                        color: '#f0f0f0'
+                    },
+                    ticks: {
+                        font: {
+                            size: 12
+                        },
+                        color: '#666',
+                        maxTicksLimit: 5
+                    }
+                }
+            },
+            interaction: {
+                intersect: false,
+                mode: 'index'
+            },
+            barThickness: 12
+        }
+    });
+    </script>
 
-            </div>
-            <div class="lesson-item" style="margin-top: 0px; padding-top: 5px; height: 100px;">
-              <div class="lesson-info">
-                <div class="lesson-title">
-                  <i class="fa-solid fa-circle-check"></i>
-                  <span class="icon" style=" margin-left: 8px;">Interaction Design</span>
-                </div>
-                <button class="btn-grad1">Join</button>
-              </div>
-              <div class="lesson-time">9:00pm</div>
-            </div>
-          </div>
-        </div>
-        
-        
-     </div>
-     
-     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
-  </body>
- <script>
-const ctx = document.getElementById('hoursChart').getContext('2d');
-new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
-    datasets: [
-      {
-        label: 'Study',
-        data: [20, 30, 50, 70, 40],
-        backgroundColor: '#00c8c8',
-      },
-      {
-        label: 'Online Test',
-        data: [10, 20, 30, 20, 10],
-        backgroundColor: '#ffc107',
-      }
-    ]
-  },
-  options: {
-    responsive: true,
-    scales: {
-      y: {
-        beginAtZero: true
-      }
+    <style>
+    /* Gradient border for search input */
+    .border-gradient {
+        border: 1px solid;
+        border-image: linear-gradient(to right, #9e8049, #eddd53) 1;
     }
-  }
-});
- </script>
+
+    /* Remove default input styles */
+    input {
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
+    }
+
+    /* Custom select styling */
+    .select-custom {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+    }
+
+    /* Custom margin utility */
+    .ml-[60px] {
+        margin-left: 60px;
+    }
+    </style>
+  </body>
 </html>
