@@ -13,12 +13,14 @@
       <div class="px-6 py-3 flex items-center">
         <!-- Logo -->
         <a class="flex items-center">
-          <img src="https://media.licdn.com/dms/image/v2/D560BAQFMO_FydaEpBA/company-logo_200_200/company-logo_200_200/0/1726658673264/aaghaaz_tech_logo?e=1751500800&v=beta&t=5JCdqtvGFKyVscr231sWO1_6im-W74Ak7rXFTwYcd8I" 
-               alt="Logo" 
-               class="h-10 w-10">
-          <div class="flex flex-col ml-2">
-            <span class="text-xl font-bold">aaghaaz</span>
-            <span class="text-xl font-bold italic -mt-1">Tech</span>
+          <div class="flex flex-col -space-y-1">
+            <div class="flex items-center">
+              <img src="https://media.licdn.com/dms/image/v2/D560BAQFMO_FydaEpBA/company-logo_200_200/company-logo_200_200/0/1726658673264/aaghaaz_tech_logo?e=1751500800&v=beta&t=5JCdqtvGFKyVscr231sWO1_6im-W74Ak7rXFTwYcd8I" 
+                   alt="Logo" 
+                   class="h-5">
+              <span class="text-xl font-bold text-[#000000] -ml-1">aghaaz</span>
+            </div>
+            <span class="text-xl font-bold italic text-[#000000] ml-6" style="margin-top: -8px; margin-left: 40px;">Tech</span>
           </div>
         </a>
 
@@ -142,8 +144,13 @@
               <div class="space-y-4">
                 <!-- Auto-layout PDF -->
                 <div>
-                  <div class="flex justify-between text-sm mb-1">
-                    <span>📄 Auto-layout.pdf</span>
+                  <div class="flex justify-between items-center text-sm mb-1">
+                    <div class="flex items-center gap-2">
+                      <div class="w-8 h-8 rounded bg-red-100 flex items-center justify-center">
+                        <span class="text-red-600 text-xs font-medium">PDF</span>
+                      </div>
+                      <span>Auto-layout.pdf</span>
+                    </div>
                     <span class="text-gray-500">8.5MB</span>
                   </div>
                   <div class="w-full bg-gray-100 rounded-full h-1">
@@ -151,24 +158,34 @@
                   </div>
                 </div>
 
-                <!-- Design Tips PDF -->
+                <!-- Design Tips PNG -->
                 <div>
-                  <div class="flex justify-between text-sm mb-1">
-                    <span>📄 Design_Tips.png</span>
+                  <div class="flex justify-between items-center text-sm mb-1">
+                    <div class="flex items-center gap-2">
+                      <div class="w-8 h-8 rounded bg-green-100 flex items-center justify-center">
+                        <span class="text-green-600 text-xs font-medium">PNG</span>
+                      </div>
+                      <span>Design_Tips.png</span>
+                    </div>
                     <span class="text-gray-500">5.1MB</span>
                   </div>
-                  <p class="text-xs text-teal-400 ml-1">
+                  <p class="text-xs text-teal-400 ml-10">
                     Let's quickly create some realistic and shiny metal Figma
                   </p>
                 </div>
 
-                <!-- Books of UI PDF -->
+                <!-- Books of UI JPG -->
                 <div>
-                  <div class="flex justify-between text-sm mb-1">
-                    <span>📄 Books_of_UI.pdf</span>
+                  <div class="flex justify-between items-center text-sm mb-1">
+                    <div class="flex items-center gap-2">
+                      <div class="w-8 h-8 rounded bg-blue-100 flex items-center justify-center">
+                        <span class="text-blue-600 text-xs font-medium">JPG</span>
+                      </div>
+                      <span>Books_of_UI.jpg</span>
+                    </div>
                     <span class="text-gray-500">2.5MB</span>
                   </div>
-                  <p class="text-xs text-teal-400 ml-1">
+                  <p class="text-xs text-teal-400 ml-10">
                     An introductory guide to the fundamental principle and practices of User Exper (UX) design
                   </p>
                 </div>
@@ -291,38 +308,101 @@
 
             <!-- Performance -->
             <div class="col-span-4">
-                <div class="bg-white rounded-xl p-5 shadow-sm h-[280px]">
-                    <h3 class="font-medium mb-4">Performance</h3>
+                <div class="bg-white rounded-xl p-6 shadow-sm h-[280px]">
+                    <!-- Header with dropdown -->
+                    <div class="flex items-center justify-between mb-4">
+                        <div class="flex items-center gap-2">
+                            <div class="w-2 h-2 rounded-full bg-[#00c8c8]"></div>
+                            <h3 class="text-gray-600">Assignment Submission Performance</h3>
+                        </div>
+                        <button class="px-4 py-1 text-sm text-gray-600 bg-gray-50 rounded-md flex items-center gap-2">
+                            Monthly
+                            <i class="fa-solid fa-chevron-down text-xs"></i>
+                        </button>
+                    </div>
                     
                     <!-- Grade Display -->
-                    <div class="text-center mt-4">
-                        <div class="relative w-28 h-28 mx-auto mb-3">
-                            <svg class="w-full h-full" viewBox="0 0 100 100">
-                                <circle 
-                                    cx="50" 
-                                    cy="50" 
-                                    r="45" 
+                    <div class="flex flex-col items-center justify-between h-[200px]">
+                        <!-- Gauge at top -->
+                        <div class="relative w-52 h-32 mt-2">
+                            <!-- Gauge Background -->
+                            <svg class="w-full h-full" viewBox="0 0 200 130">
+                                <!-- Background Arc -->
+                                <path 
+                                    d="M 20 130 A 90 90 0 0 1 180 130" 
                                     fill="none" 
                                     stroke="#f0f0f0" 
-                                    stroke-width="8"
+                                    stroke-width="10"
+                                    stroke-linecap="round"
                                 />
-                                <circle 
-                                    cx="50" 
-                                    cy="50" 
-                                    r="45" 
+                                <!-- Yellow Section -->
+                                <path 
+                                    d="M 20 130 A 90 90 0 0 1 100 40" 
+                                    fill="none" 
+                                    stroke="#eddd53" 
+                                    stroke-width="10"
+                                    stroke-linecap="round"
+                                />
+                                <!-- Green Section -->
+                                <path 
+                                    d="M 100 40 A 90 90 0 0 1 180 130" 
                                     fill="none" 
                                     stroke="#00c8c8" 
-                                    stroke-width="8" 
-                                    stroke-dasharray="283" 
-                                    stroke-dashoffset="70" 
-                                    transform="rotate(-90 50 50)"
+                                    stroke-width="10"
+                                    stroke-linecap="round"
                                 />
+                                <!-- Small Tick Marks -->
+                                <g stroke="#e5e5e5" stroke-width="2">
+                                    <path d="M 35 125 L 40 115" />
+                                    <path d="M 60 105 L 67 97" />
+                                    <path d="M 90 85 L 97 77" />
+                                    <path d="M 120 75 L 127 67" />
+                                    <path d="M 150 85 L 157 77" />
+                                    <path d="M 165 110 L 172 102" />
+                                </g>
+                                <!-- Needle with Triangle -->
+                                <g transform="translate(100, 130) rotate(125)">
+                                    <!-- Needle Stem -->
+                                    <line 
+                                        x1="0" 
+                                        y1="0" 
+                                        x2="65" 
+                                        y2="0" 
+                                        stroke="#00c8c8" 
+                                        stroke-width="2"
+                                    />
+                                    <!-- Needle Triangle -->
+                                    <path 
+                                        d="M 65 -4 L 80 0 L 65 4 Z" 
+                                        fill="#00c8c8"
+                                    />
+                                    <!-- Center Circle -->
+                                    <circle 
+                                        cx="0" 
+                                        cy="0" 
+                                        r="4" 
+                                        fill="#00c8c8"
+                                    />
+                                    <!-- Outer Ring -->
+                                    <circle 
+                                        cx="0" 
+                                        cy="0" 
+                                        r="6" 
+                                        fill="none"
+                                        stroke="#00c8c8"
+                                        stroke-width="1"
+                                    />
+                                </g>
                             </svg>
-                            <div class="absolute inset-0 flex flex-col items-center justify-center">
-                                <span class="text-4xl font-bold text-teal-400">8.966</span>
-                            </div>
                         </div>
-                        <p class="text-sm text-gray-500">Monthly Assignment Grade</p>
+                        
+                        <!-- Grade Text at bottom with proper spacing -->
+                        <div class="text-center mb-4">
+                            <p class="text-lg text-gray-700">
+                                <span class="font-normal">Your Grade: </span>
+                                <span class="font-bold">8.966</span>
+                            </p>
+                        </div>
                     </div>
                 </div>
             </div>
